@@ -14,6 +14,7 @@ button.primary {
 
 button.secondary {
   @apply bg-white text-primary border-4 border-primary;
+}
 
 .header {
   @apply font-header;
