@@ -26,8 +26,8 @@
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css -w",
-    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
+    "build:css": "postcss src/styles/main.css -o src/styles/main.output.css",
+    "watch:css": "postcss src/styles/main.css -o src/styles/main.output.css"
   },
   "eslintConfig": {
     "extends": "react-app"
