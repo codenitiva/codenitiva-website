@@ -1,9 +1,0 @@
-@tailwind base;
-
-.header {
-    @apply font-header;
-}
-
-@tailwind components;
-
-@tailwind utilities;
