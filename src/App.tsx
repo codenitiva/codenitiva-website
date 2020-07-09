@@ -3,10 +3,11 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <div className={`flex h-screen w-screen justify-center items-center`}>
-      <p className={`text-6xl`}>Hello, Codenitiva!</p>
+    <div className="flex flex-row justify-center">
+      <button className="primary">Codenitiva</button>
+      <button className="secondary">Codenitiva</button>
     </div>
-  );
+  )
 }
 
 export default App;
