@@ -4,6 +4,18 @@
   @apply box-border;
 }
 
+p {
+  @apply text-dark text-sm font-content;
+}
+
+a {
+  @apply transition duration-200 text-dark font-header font-bold text-lg;
+}
+
+a.active, a:hover{
+  @apply text-primary;
+}
+
 button {
   @apply py-1 px-8 text-xl font-header font-bold rounded-full;
 }

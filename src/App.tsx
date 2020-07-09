@@ -1,11 +1,12 @@
 import React from 'react';
 import "./styles/main.css";
 
+import NavBar from './components/NavBar';
+
 function App() {
   return (
-    <div className="flex flex-row justify-center">
-      <button className="primary">Codenitiva</button>
-      <button className="secondary">Codenitiva</button>
+    <div className="min-h-screen">
+      <NavBar />
     </div>
   )
 }
