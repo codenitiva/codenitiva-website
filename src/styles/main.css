@@ -5,7 +5,7 @@
 }
 
 button {
-  @apply py-2 px-8 text-xl font-sans font-bold rounded-full;
+  @apply py-2 px-8 text-xl font-sans font-header font-bold rounded-full;
 }
 
 button.primary {
@@ -14,7 +14,11 @@ button.primary {
 
 button.secondary {
   @apply bg-white text-primary border-4 border-primary;
+
+.header {
+  @apply font-header;
 }
 
 @tailwind components;
+
 @tailwind utilities;
