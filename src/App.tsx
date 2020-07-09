@@ -4,7 +4,7 @@ import "./styles/main.css";
 function App() {
   return (
     <div className={`flex h-screen w-screen justify-center items-center`}>
-      <p className={`text-6xl`}>Hello, Codenitiva!</p>
+      <p className={`text-6xl header`}>Hello, Codenitiva!</p>
     </div>
   );
 }

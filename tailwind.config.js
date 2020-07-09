@@ -1,7 +1,10 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    fontFamily: {
+      header: ['Quicksand', 'sans-serif'],
+      content: ['Inter', 'sans-serif']
+    }
   },
   variants: {},
   plugins: [],
