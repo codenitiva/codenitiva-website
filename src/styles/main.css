@@ -8,11 +8,11 @@ p {
   @apply text-dark text-sm font-content;
 }
 
-a {
+a.nav-drawer {
   @apply transition duration-200 text-dark font-header font-bold text-lg;
 }
 
-a.active, a:hover{
+a.active, a:hover {
   @apply text-primary;
 }
 
@@ -37,7 +37,7 @@ button.secondary {
   @apply header text-base text-dark font-bold my-1;
 }
 
-.footer-text {
+a.footer-text {
   @apply text-sm font-content text-dark my-1;
 }
 
@@ -50,7 +50,7 @@ button.secondary {
     @apply text-xl;
   }
 
-  .footer-text {
+  a.footer-text {
     @apply text-base;
   }
 

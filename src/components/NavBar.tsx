@@ -32,7 +32,7 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
         {menuItemsLabel.map(({ label, path }, index) => (
           <a 
             key={`#drawer-link-${label}-${index}`}
-            className={`${isActive(path) ? 'active' : ''} mx-2 border-t-2 py-2`}
+            className={`${isActive(path) ? 'active' : ''} nav-drawer mx-2 border-t-2 py-2`}
             href={path}
           >
             {label}
@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
         {menuItemsLabel.map(({ label, path }, index) => (
           <a 
             key={`#nav-link-${label}-${index}`}
-            className={`${isActive(path) ? 'active' : ''} mx-2`}
+            className={`${isActive(path) ? 'active' : ''} nav-drawer mx-2`}
             href={path}
           >
             {label}
