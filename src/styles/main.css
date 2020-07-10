@@ -20,6 +20,34 @@ button.secondary {
   @apply font-header;
 }
 
+/*Footer Custom CSS*/
+.footer-header {
+  @apply header text-base text-dark font-bold my-1;
+}
+
+.footer-text {
+  @apply text-sm font-content text-dark my-1;
+}
+
+.footer-icon {
+  @apply h-8 w-8;
+}
+
+@screen lg {
+  .footer-header {
+    @apply text-xl;
+  }
+
+  .footer-text {
+    @apply text-base;
+  }
+
+  .footer-icon {
+    @apply h-10 w-10;
+  }
+}
+/*END*/
+
 @tailwind components;
 
 @tailwind utilities;

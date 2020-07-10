@@ -5,6 +5,10 @@ module.exports = {
       header: ['Quicksand', 'sans-serif'],
       content: ['Inter', 'sans-serif']
     },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      footer: '#FFEAD1'
+    }),
     extend: {
       colors: {
         primary: '#FF6F00',
