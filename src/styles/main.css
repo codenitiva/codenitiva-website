@@ -29,12 +29,20 @@ a.active, a:hover {
 }
 
 .header {
-  @apply font-header;
+  @apply font-header text-dark;
+}
+
+h2 {
+  @apply header text-2xl font-bold;
+}
+
+h5 {
+  @apply text-dark font-content text-sm;
 }
 
 /*Footer Custom CSS*/
 .footer-header {
-  @apply header text-base text-dark font-bold my-1;
+  @apply header text-base font-bold my-1;
 }
 
 a.footer-text {
