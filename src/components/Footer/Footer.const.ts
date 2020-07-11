@@ -22,25 +22,10 @@ export const moreItemsLabel = [
   }
 ];
 
-export const socialMediaItems = [
-  {
-    source: require("../../assets/social/github.svg"),
-    alt: strings.github,
-    path: '/'
-  },
-  {
-    source: require("../../assets/social/linkedin.svg"),
-    alt: strings.linkedin,
-    path: '/'
-  },
-  {
-    source: require("../../assets/social/slack.svg"),
-    alt: strings.slack,
-    path: '/'
-  },
-  {
-    source: require("../../assets/social/facebook.svg"),
-    alt: strings.facebook,
-    path: '/'
-  },
+export const socialMediaTypes = ['github', 'linkedin', 'slack', 'facebook'];
+export const socialMediaURL = [
+  'https://www.github.com/codenitiva',
+  'https://www.linkedin.com/company/codenitiva',
+  'https://www.slack.com',
+  'https://www.facebook.com'
 ];
