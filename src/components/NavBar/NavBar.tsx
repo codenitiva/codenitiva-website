@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import strings from "../../variables/strings"
 const menuItemsLabel = [
   {
-    label: 'Home',
+    label: strings.home,
     path: '/'
   },
   {
-    label: 'About Us',
+    label: strings.about,
     path: '/about'
   }
 ];

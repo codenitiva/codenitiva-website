@@ -1,21 +1,23 @@
+import strings from "../../variables/strings"
+
 export const learnShareItemsLabel = [
   {
-    label: 'News',
+    label: strings.news,
     path: '/'
   },
   {
-    label: 'Blog',
+    label: strings.blog,
     path: '/'
   },
   {
-    label: 'Blog',
+    label: strings.forum,
     path: '/'
   }
 ];
 
 export const moreItemsLabel = [
   {
-    label: 'Contact Us',
+    label: strings.contact,
     path: '/'
   }
 ]
@@ -23,22 +25,22 @@ export const moreItemsLabel = [
 export const socialMediaItems = [
   {
     source: require("../../assets/social/github.svg"),
-    alt: 'GitHub',
+    alt: strings.github,
     path: '/'
   },
   {
     source: require("../../assets/social/linkedin.svg"),
-    alt: 'LinkedIn',
+    alt: strings.linkedin,
     path: '/'
   },
   {
     source: require("../../assets/social/slack.svg"),
-    alt: 'Slack',
+    alt: strings.slack,
     path: '/'
   },
   {
     source: require("../../assets/social/facebook.svg"),
-    alt: 'Facebook',
+    alt: strings.facebook,
     path: '/'
   },
 ]
