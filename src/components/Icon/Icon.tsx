@@ -4,7 +4,11 @@ import images from "../../variables/images";
 
 export const Icon: React.FC<IconProps> = ({ link, icon }) => {
   return (
-    <a href={link} target="_blank">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
         className="footer-icon mr-2"
         src={images(icon)}
