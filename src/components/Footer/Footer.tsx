@@ -44,7 +44,7 @@ const Footer : React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col justify-start items-start my-4 lg:my-8 mx-8">
-        <a href={"/"}>
+        <a href="/">
           <img
             className="w-48 lg:w-56"
             src={require("../../assets/brand/Codenitiva.svg")}
