@@ -1,6 +1,12 @@
 import React from "react";
 import "../../styles/main.output.css";
-import { learnShareItemsLabel, moreItemsLabel, socialMediaItems } from "./Footer.const";
+import {
+  learnShareItemsLabel,
+  moreItemsLabel,
+  socialMediaTypes,
+  socialMediaURL
+} from "./Footer.const";
+import { Icon } from "../Icon/Icon";
 
 const Footer : React.FC = () => {
   return (
@@ -32,14 +38,12 @@ const Footer : React.FC = () => {
       <div className="flex flex-col justify-start items-start my-4 lg:my-8 mx-8">
         <div className="footer-header">SOCIAL MEDIAS</div>
         <div className="flex flex-row justify-center items-center">
-          {socialMediaItems.map(({source, path, alt}, index) => (
-            <a href={path}>
-              <img
-                className="footer-icon mr-2"
-                src={source}
-                alt={alt}
-              />
-            </a>
+          {socialMediaTypes.map((type, index) => (
+            <Icon
+              key={`#icon-${type}-${index}`}
+              icon={type}
+              link={socialMediaURL[index]}
+            />
           ))}
         </div>
       </div>
