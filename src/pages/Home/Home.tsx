@@ -3,7 +3,7 @@ import React from 'react';
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full items-center p-4">
-      <div className="flex flex-col w-full lg:max-w-5xl">
+      <div className="flex flex-col w-full md:max-w-md lg:max-w-5xl">
         <div className="flex flex-col lg:flex-row items-center">
           <img 
             alt="welcome"
