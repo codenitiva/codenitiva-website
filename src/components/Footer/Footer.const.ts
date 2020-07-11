@@ -20,7 +20,7 @@ export const moreItemsLabel = [
     label: strings.contact,
     path: '/'
   }
-]
+];
 
 export const socialMediaItems = [
   {
@@ -43,4 +43,4 @@ export const socialMediaItems = [
     alt: strings.facebook,
     path: '/'
   },
-]
+];
