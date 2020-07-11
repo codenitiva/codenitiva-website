@@ -1,4 +1,4 @@
-import strings from "../../variables/strings"
+import strings from "../../variables/strings";
 
 export const learnShareItemsLabel = [
   {
