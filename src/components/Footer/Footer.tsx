@@ -48,6 +48,7 @@ export const Footer : React.FC = () => {
           <img
             className="w-48 lg:w-56"
             src={require("../../assets/brand/Codenitiva.svg")}
+            alt="This is Codenitiva"
           />
         </a>
         <div className="text-xs lg:text-sm font-content text-dark my-1">
