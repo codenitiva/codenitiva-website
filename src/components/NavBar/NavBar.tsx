@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
-import strings from "../../variables/strings"
-const menuItemsLabel = [
-  {
-    label: strings.home,
-    path: '/'
-  },
-  {
-    label: strings.about,
-    path: '/about'
-  }
-];
+import { menuItemsLabel } from './NavBar.const';
+import { DrawerProps } from './NavBar.type';
 
 const mockUsePath = () => '/';
-
-type DrawerProps = {
-  open: boolean;
-  close: () => void;
-};
 
 const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
   const currentPath = mockUsePath();
@@ -49,12 +35,12 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
 };
 
 const NavBar: React.FC = () => {
-  const [drawerOpen, setdrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const currentPath = mockUsePath();
 
   const isActive = (path: string) => currentPath === path;
-  const openDrawer = () => setdrawerOpen(true);
-  const closeDrawer = () => setdrawerOpen(false);
+  const openDrawer = () => setDrawerOpen(true);
+  const closeDrawer = () => setDrawerOpen(false);
 
   return (
     <nav className="flex flex-row lg:flex-row-reverse items-center justify-between p-4">

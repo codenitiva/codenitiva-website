@@ -30,7 +30,10 @@
     "watch:css": "postcss src/styles/main.css -o src/styles/main.output.css"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "semi": "error"
+    }
   },
   "browserslist": {
     "production": [
