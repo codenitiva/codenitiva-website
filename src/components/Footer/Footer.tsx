@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/main.output.css";
 import { learnShareItemsLabel, moreItemsLabel, socialMediaItems } from "./Footer.const";
 
-export const Footer : React.FC = () => {
+const Footer : React.FC = () => {
   return (
     <footer className="w-full flex flex-col lg:flex-row lg:justify-around bg-footer">
       <div className="flex flex-col justify-start items-start my-4 lg:my-8 mx-8">
@@ -57,4 +57,6 @@ export const Footer : React.FC = () => {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
