@@ -16,15 +16,15 @@ a.active, a:hover {
   @apply text-primary;
 }
 
-button {
-  @apply py-1 px-8 text-xl font-header font-bold rounded-full;
+.btn {
+  @apply transition duration-200  py-1 px-8 text-xl font-header font-bold rounded-full;
 }
 
-button.primary {
-  @apply bg-primary text-white;
+.btn.primary, .btn.secondary:hover {
+  @apply bg-primary text-white border-2 border-primary;
 }
 
-button.secondary {
+.btn.secondary, .btn.primary:hover {
   @apply bg-white text-primary border-2 border-primary;
 }
 

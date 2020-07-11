@@ -12,6 +12,7 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Switch>
+          <a href="/" className="btn secondary">Button</a>
           {/* TODO: Bind components to each route */}
           <Route path="/" />
           <Route path="/about" />
