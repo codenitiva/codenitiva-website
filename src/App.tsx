@@ -2,7 +2,6 @@ import React from 'react';
 import Footer from "./components/Footer/Footer";
 import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
-import Card from "./components/Card/Card";
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -10,7 +9,7 @@ import "./styles/main.css";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen">
       <NavBar />
       <BrowserRouter>
         <Switch>

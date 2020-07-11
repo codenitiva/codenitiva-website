@@ -10,7 +10,7 @@ import { Icon } from "../Icon/Icon";
 
 const Footer : React.FC = () => {
   return (
-    <footer className="w-full flex flex-col lg:flex-row lg:justify-around bg-footer absolute bottom-0">
+    <footer className="w-full flex flex-col lg:flex-row lg:justify-around bg-footer">
       <div className="flex flex-col justify-start items-start my-4 lg:my-8 mx-8">
         <div className="footer-header">LEARN & SHARE</div>
         {learnShareItemsLabel.map(({ label, path }, index) => (

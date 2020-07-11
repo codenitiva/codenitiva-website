@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
   const closeDrawer = () => setDrawerOpen(false);
 
   return (
-    <nav className="flex flex-row lg:flex-row-reverse items-center justify-between p-4 sticky">
+    <nav className="flex flex-row bg-white lg:flex-row-reverse items-center justify-between p-4 sticky top-0">
       <Drawer open={drawerOpen} close={closeDrawer} />
       <div onClick={openDrawer} className="lg:hidden">
         <img

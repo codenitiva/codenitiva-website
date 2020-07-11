@@ -4,10 +4,6 @@
   @apply box-border;
 }
 
-p {
-  @apply text-dark text-sm font-content;
-}
-
 a.nav-drawer {
   @apply transition duration-200 text-dark font-header font-bold text-lg;
 }
@@ -30,6 +26,25 @@ a.active, a:hover {
 
 .header {
   @apply font-header text-dark;
+}
+
+
+p {
+  @apply text-dark text-sm font-content;
+}
+
+h1 {
+  @apply header text-2xl font-bold;
+}
+
+@screen lg {
+  p {
+    @apply text-dark text-lg font-content;
+  }
+
+  h1 {
+    @apply header text-4xl font-bold;
+  }
 }
 
 h2 {
