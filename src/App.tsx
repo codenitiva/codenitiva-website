@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from "./components/Footer/Footer";
 import NavBar from './components/NavBar/NavBar';
+import Home from './pages/Home/Home';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -12,9 +13,8 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Switch>
-          <a href="/" className="btn secondary">Button</a>
           {/* TODO: Bind components to each route */}
-          <Route path="/" />
+          <Route path="/" component={Home} />
           <Route path="/about" />
         </Switch>
       </BrowserRouter>
