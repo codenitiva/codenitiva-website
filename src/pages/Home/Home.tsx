@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full items-center p-4">
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <div className="flex flex-col w-full md:max-w-md lg:max-w-5xl">
         <div className="flex flex-col lg:flex-row items-center">
           <img 
