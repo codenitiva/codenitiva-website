@@ -6,7 +6,7 @@ import {
   socialMediaTypes,
   socialMediaURL
 } from "./Footer.const";
-import { Icon } from "../Icon/Icon";
+import Icon from "../Icon/Icon";
 
 const Footer : React.FC = () => {
   return (

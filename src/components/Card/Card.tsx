@@ -1,6 +1,6 @@
 import React from "react";
 import { CardProps } from "./Card.type";
-import { Icon } from "../Icon/Icon";
+import Icon from "../Icon/Icon";
 
 const Card : React.FC<CardProps> = ({
   position,
