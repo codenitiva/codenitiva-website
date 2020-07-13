@@ -1,12 +1,14 @@
 import React from 'react';
-import Footer from "./components/Footer/Footer";
-import NavBar from './components/NavBar/NavBar';
-import Home from './pages/Home/Home';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
 import "./styles/main.css";
+
+import Footer from "./components/Footer/Footer";
+import NavBar from './components/NavBar/NavBar';
+import Home from './pages/Home/Home';
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -18,8 +20,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           {/* TODO: Bind components to each route */}
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/about" />
+          <Route path="/signup" component={SignUp}/>
         </Switch>
       </BrowserRouter>
       <Footer />

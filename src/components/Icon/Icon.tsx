@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "./Icon.type";
-import images from "../../variables/images";
+import icons from "../../variables/icons";
 
 const Icon: React.FC<IconProps> = ({ link, icon }) => {
   return (
@@ -11,7 +11,7 @@ const Icon: React.FC<IconProps> = ({ link, icon }) => {
     >
       <img
         className="footer-icon mr-2"
-        src={images(icon)}
+        src={icons(icon)}
         alt={icon}
       />
     </a>
