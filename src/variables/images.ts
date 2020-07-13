@@ -1,5 +1,7 @@
-const icons = (icon: string) => {
+const images = (icon: string) => {
   switch (icon) {
+    case 'Codenitiva': 
+      return require("../assets/brand/Codenitiva.svg");
     case 'github':
       return require("../assets/social/github.svg");
     case 'linkedin':
@@ -18,7 +20,9 @@ const icons = (icon: string) => {
       return require("../assets/icon/user.svg");
     case 'key':
       return require("../assets/icon/password.svg");
+    case 'card-vector':
+      return require("../assets/vector/card-vector.svg");
   }
 };
 
-export default icons;
+export default images;

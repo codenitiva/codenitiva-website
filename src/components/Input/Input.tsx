@@ -1,6 +1,6 @@
 import React from "react";
 import { InputProps } from "./Input.type";
-import icons from "../../variables/icons";
+import images from "../../variables/images";
 
 const Input : React.FC<InputProps> = ({
   type = 'text',
@@ -18,7 +18,7 @@ const Input : React.FC<InputProps> = ({
     <div className="flex flex-row justify-between items-center border-b-2 p-2">
       <span className={`${style ? '' : 'hidden'} flex flex-row justify-center`}>
         <img
-          src={icons(icon)}
+          src={images(icon)}
         />
         <div className="border-r-2 h-8 mx-2"></div>
       </span>
@@ -30,7 +30,7 @@ const Input : React.FC<InputProps> = ({
       />
       <span className={`${style ? 'hidden' : ''}`}>
         <img
-          src={icons(icon)}
+          src={images(icon)}
         />
       </span>
     </div>

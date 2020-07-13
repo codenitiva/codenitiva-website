@@ -7,6 +7,7 @@ import {
   socialMediaURL
 } from "./Footer.const";
 import Icon from "../Icon/Icon";
+import images from "../../variables/images";
 
 const Footer : React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const Footer : React.FC = () => {
         <a href="/">
           <img
             className="w-48 lg:w-56"
-            src={require("../../assets/brand/Codenitiva.svg")}
+            src={images("Codenitiva")}
             alt="This is Codenitiva"
           />
         </a>
