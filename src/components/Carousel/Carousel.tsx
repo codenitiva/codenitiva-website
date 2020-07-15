@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import images from '../../variables/images';
 import { CarouselProps, CarouselButton } from './Carousel.type';
 
 const Carousel: React.FC<CarouselProps> = ({ data }) => {
@@ -49,20 +50,20 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
           <img 
             className="mx-4 w-4 cursor-pointer"
             alt="indicator"
-            src={index === active ? require('../../assets/icon/active_indicator.svg') : require('../../assets/icon/indicator.svg')}
+            src={index === active ? images('active-indicator') : images('indicator')}
             onClick={() => setActive(index)}
           />
         ))}
       </div>
       <img 
         className={`cursor-pointer absolute bottom-carousel lg:bottom-0 left-4 w-4 lg:w-6 ${show(CarouselButton.Prev)}`}
-        src={require('../../assets/icon/left.svg')}
+        src={images('left')}
         onClick={gotoPrevious}
         alt="prev"
       />
       <img
         className={`cursor-pointer absolute bottom-carousel lg:bottom-0 right-4 w-4 lg:w-6 ${show(CarouselButton.Next)}`}
-        src={require('../../assets/icon/right.svg')}
+        src={images('right')}
         onClick={gotoNext}
         alt="next"
       />
