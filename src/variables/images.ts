@@ -22,6 +22,8 @@ const images = (icon: string) => {
       return require("../assets/icon/password.svg");
     case 'card-vector':
       return require("../assets/vector/card-vector.svg");
+    case 'dropdown':
+      return require("../assets/icon/arrow.svg");
   }
 };
 
