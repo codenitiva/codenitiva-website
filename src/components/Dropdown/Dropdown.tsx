@@ -4,7 +4,7 @@ import dropDownData from "./Dropdown.const";
 import { DropDownProps } from "./Dropdown.type";
 
 
-const DropDown : React.FC<DropDownProps> = ({ info }) => {
+const DropDown : React.FC<DropDownProps> = ({ info, setChosenItem }) => {
 
   const [_open, _setOpen] = useState(false);
   const [_chosen, _setChosen] = useState("Your Dreams");
@@ -33,11 +33,12 @@ const DropDown : React.FC<DropDownProps> = ({ info }) => {
           {dropDownData(info)?.map((label, index) => (
             <div className="w-full border-2 border-t-0 cursor-pointer">
               <h2 
-                key={`#items-${index}-${label}`}
+                key={`#items-list-${label}-${index}`}
                 className="w-48 lg:w-56 text-base lg:text-lg mx-2 my-1" 
                 onClick={ () => {
                   _setChosen(label);
                   _setOpen(prevState => !prevState);
+                  setChosenItem(label);
                 } }
               >
                 {label}
