@@ -1,6 +1,7 @@
 import React from "react";
 import { CardProps } from "./Card.type";
-import { Icon } from "../Icon/Icon";
+import Icon from "../Icon/Icon";
+import images from "../../variables/images";
 
 const Card : React.FC<CardProps> = ({
   position,
@@ -14,7 +15,7 @@ const Card : React.FC<CardProps> = ({
       <div className="absolute top-0 left-0">
         <img
           className="w-64"
-          src={require("../../assets/vector/card-vector.svg")}
+          src={images('card-vector')}
           alt="Card Vector"
         />
       </div>

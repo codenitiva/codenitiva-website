@@ -30,7 +30,8 @@ module.exports = {
     },
     boxShadow: {
       card: "0px 2px 80px rgba(0, 0, 0, 0.1)"
-    }
+    },
+    placeholderColor: theme => theme('colors')
   },
   variants: {},
   plugins: [],

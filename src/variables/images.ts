@@ -1,5 +1,7 @@
 const images = (icon: string) => {
   switch (icon) {
+    case 'Codenitiva': 
+      return require("../assets/brand/Codenitiva.svg");
     case 'github':
       return require("../assets/social/github.svg");
     case 'linkedin':
@@ -12,6 +14,18 @@ const images = (icon: string) => {
       return require('../assets/icon/left.svg');
     case 'right':
       return require('../assets/icon/right.svg');
+    case 'cross':
+      return require("../assets/icon/x.svg");
+    case 'enter':
+      return require("../assets/icon/enter.svg");
+    case 'hamburger': 
+      return require("../assets/icon/hamburger.svg");
+    case 'user':
+      return require("../assets/icon/user.svg");
+    case 'key':
+      return require("../assets/icon/password.svg");
+    case 'card-vector':
+      return require("../assets/vector/card-vector.svg");
   }
 };
 

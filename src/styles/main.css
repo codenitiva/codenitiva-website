@@ -37,6 +37,10 @@ h1 {
   @apply header text-2xl font-bold;
 }
 
+input {
+  @apply header text-base font-bold;
+}
+
 @screen lg {
   p {
     @apply text-dark text-lg font-content;
@@ -44,6 +48,10 @@ h1 {
 
   h1 {
     @apply header text-4xl font-bold;
+  }
+
+  input {
+    @apply text-lg;
   }
 }
 

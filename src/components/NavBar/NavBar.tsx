@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { menuItemsLabel } from './NavBar.const';
 import { DrawerProps } from './NavBar.type';
+import images from '../../variables/images';
 
 const mockUsePath = () => '/';
 
@@ -18,7 +19,7 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
         <div onClick={close} className="self-end mb-4">
           <img
             className="w-6"
-            src={require("../../assets/icon/x.svg")}
+            src={images("cross")}
             alt="Close"
           />
         </div>
@@ -54,7 +55,7 @@ const NavBar: React.FC = () => {
       <div onClick={openDrawer} className="lg:hidden">
         <img
           className="w-8"
-          src={require("../../assets/icon/hamburger.svg")}
+          src={images("hamburger")}
           alt="Menu"
         />
       </div>
@@ -72,7 +73,7 @@ const NavBar: React.FC = () => {
       <a href="/">
         <img
           className="w-48 lg:w-56"
-          src={require("../../assets/brand/Codenitiva.svg")}
+          src={images("Codenitiva")}
           alt="This is Codenitiva"
         />
       </a>
