@@ -1,21 +1,15 @@
-import React, { useState } from "react";
-import Input from "../../components/Input/Input";
+import React from "react";
+import Form from "../../components/Form/Form";
+import Layout from "../../components/Layout/Layout";
+import signUpConstants from "./SignUp.const";
 
 const SignUp : React.FC = () => {
-  
-  const [_email, _setEmail] = useState("");
-
-  console.log(_email);
 
   return (
-    <div className="flex w-full justify-center items-center">
-      <Input 
-        type="text"
-        placeholder="eg. hi@codenitiva.com"
-        setText={_setEmail}
-        icon="user"
-        style="left"
-      />
+    <div className="flex w-full">
+      <Layout secondary>
+        <Form data={signUpConstants.formData}/>
+      </Layout>
     </div>
   );
 };
