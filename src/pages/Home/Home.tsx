@@ -1,13 +1,18 @@
 import React from 'react';
+import Carousel from '../../components/Carousel/Carousel';
+import Layout from '../../components/Layout/Layout';
+
 import { Helmet } from 'react-helmet';
+
+import homeConstants from './Home.const';
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col w-full items-center p-4">
+    <>
       <Helmet>
         <title>Home</title>
       </Helmet>
-      <div className="flex flex-col w-full md:max-w-md lg:max-w-5xl">
+      <Layout>
         <div className="flex flex-col lg:flex-row items-center">
           <img 
             alt="welcome"
@@ -27,8 +32,11 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Layout>
+      <Layout secondary>
+        <Carousel data={homeConstants.carouselData} />
+      </Layout>
+    </>
   );
 };
 

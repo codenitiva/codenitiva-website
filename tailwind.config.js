@@ -15,12 +15,17 @@ module.exports = {
         secondary: '#FFEAD1',
         dark: '#3E2723',
         muted: '#979797',
-        light: '#D2D2D2'
+        light: '#D2D2D2',
+        accent: '#FAFAFA'
       },
       spacing: {
         '72': '18rem',
         '80': '20rem',
         '88': '22rem',
+      },
+      inset: {
+        '4': '1rem',
+        carousel: '35%',
       }
     },
     boxShadow: {
