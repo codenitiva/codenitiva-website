@@ -1,4 +1,5 @@
 export type DropDownProps = {
-  info: string;
+  list: string;
+  placeholder: string;
   setChosenItem: (e: any) => void;
 };
