@@ -8,6 +8,10 @@ const images = (icon: string) => {
       return require("../assets/social/slack.svg");
     case 'facebook':
       return require("../assets/social/facebook.svg");
+    case 'left':
+      return require('../assets/icon/left.svg');
+    case 'right':
+      return require('../assets/icon/right.svg');
   }
 };
 
