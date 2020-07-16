@@ -10,3 +10,15 @@ export const menuItemsLabel = [
     path: '/about'
   }
 ];
+
+export const menuItemsButton = [
+  {
+    label: strings.signIn,
+    path: '/signin'
+  },
+  {
+    label: strings.signUp,
+    path: '/signup'
+  }
+]
+
