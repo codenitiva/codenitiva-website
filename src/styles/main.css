@@ -13,7 +13,7 @@ a.active, a:hover {
 }
 
 .btn {
-  @apply transition duration-200  py-1 px-8 text-xl font-header font-bold rounded-full;
+  @apply transition duration-200  py-1 px-8 text-lg font-header font-bold rounded-full;
 }
 
 .btn.primary, .btn.secondary:hover {
@@ -52,6 +52,10 @@ input {
 
   input {
     @apply text-lg;
+  }
+
+  .btn {
+    @apply text-xl
   }
 }
 

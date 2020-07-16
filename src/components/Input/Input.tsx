@@ -15,7 +15,7 @@ const Input : React.FC<InputProps> = ({
   };
 
   return (
-    <div className="flex flex-row justify-between w-64 items-center border-b-2 p-2">
+    <div className="flex flex-row justify-between items-center border-b-2 p-2">
       <span className={`${style ? '' : 'hidden'} flex flex-row justify-center`}>
         <img
           src={images(icon)}
