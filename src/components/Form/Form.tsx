@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { FormLayoutProps, FormProps, FormButton } from "./Form.type";
 import Input from "../Input/Input";
 import DropDown from "../Dropdown/Dropdown";
+import ModalTC from "../Modal/Modal";
 
 const FormLayout : React.FC<FormLayoutProps> = ({
-  image, content, inputType, gotoNext, gotoPrevious, show, setObjectData, active
+  image, content, inputType, gotoNext, gotoPrevious, show, setObjectData, active, open
 }) => {
-
-  console.log(active);
 
   return (
     <div className="w-full flex flex-col lg:flex-row items-center flex-shrink-0">
@@ -36,14 +35,14 @@ const FormLayout : React.FC<FormLayoutProps> = ({
         }
         <div className="mt-8 flex flex-row justify-between w-4/5 lg:w-9/12">
           <button 
-            className={`btn primary w-5/12 lg:w-2/5 ${show(FormButton.Prev)}`}
+            className={`btn primary w-5/12 lg:w-2/5 text-sm md:text-lg ${show(FormButton.Prev)}`}
             onClick={gotoPrevious}
           >
             Prev
           </button>
           <button 
-            className={`btn primary w-5/12 lg:w-2/5`}
-            onClick={ active ? () => console.log('Submit') : gotoNext }
+            className={`btn primary w-5/12 lg:w-2/5 text-sm md:text-lg`}
+            onClick={ active ? open : gotoNext }
           >
             { active ? `Submit` : `Next` }
           </button>
@@ -53,12 +52,10 @@ const FormLayout : React.FC<FormLayoutProps> = ({
   );
 };
 
-const Form : React.FC<FormProps> = ({ data }) => {
+const Form : React.FC<FormProps> = ({ data, open }) => {
 
   const [_active, _setActive] = useState(0);
   const [_filledData, _setFilledData] = useState({});
-
-  console.log(_filledData)
 
   const goto = (index: number): void => index >= 0 && index <= data.length-1 ? _setActive(index) : undefined;
   const gotoPrevious = (): void => goto(_active - 1);
@@ -88,6 +85,7 @@ const Form : React.FC<FormProps> = ({ data }) => {
             show={show}
             setObjectData={ (value: string) => _updateFilledDataState(key, value) }
             active={_active === data.length - 1}
+            open={open}
           />
         ))}
       </div>

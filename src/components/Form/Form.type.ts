@@ -10,11 +10,13 @@ export type FormLayoutProps = FormDataType & {
   gotoNext: () => void;
   show: (type: FormButton) => string;
   setObjectData: (data: string) => void;
+  open: () => void;
   active: boolean;
 };
 
 export type FormProps = {
   data: FormDataType[]
+  open: () => void;
 };
 
 export enum FormButton {
