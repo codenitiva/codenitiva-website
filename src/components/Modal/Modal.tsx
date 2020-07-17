@@ -7,7 +7,7 @@ const ModalLayout : React.FC<ModalProps> = ({ open, close, children }) => {
   return (
     <div className={`
       ${open ? '' : 'hidden'}
-      absolute top-0 left-0 w-screen h-screen
+      absolute top-0 left-0 w-full h-screen
       flex flex-col items-center justify-center
     `}>
       <div className={`
@@ -24,7 +24,7 @@ const ModalLayout : React.FC<ModalProps> = ({ open, close, children }) => {
         </div>
         {children}
       </div>
-      <div className="fixed top-0 left-0 w-screen h-screen bg-muted opacity-75 z-40"/>
+      <div className="fixed top-0 left-0 w-full h-screen bg-muted opacity-75 z-40"/>
     </div>
   );
 };

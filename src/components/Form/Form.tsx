@@ -35,13 +35,13 @@ const FormLayout : React.FC<FormLayoutProps> = ({
         }
         <div className="mt-8 flex flex-row justify-between w-4/5 lg:w-9/12">
           <button 
-            className={`btn primary w-5/12 lg:w-2/5 text-sm md:text-lg ${show(FormButton.Prev)}`}
+            className={`btn primary w-auto lg:w-2/5 lg:text-lg ${show(FormButton.Prev)}`}
             onClick={gotoPrevious}
           >
             Prev
           </button>
           <button 
-            className={`btn primary w-5/12 lg:w-2/5 text-sm md:text-lg`}
+            className={`btn primary w-auto lg:w-2/5 lg:text-lg`}
             onClick={ active ? open : gotoNext }
           >
             { active ? `Submit` : `Next` }
