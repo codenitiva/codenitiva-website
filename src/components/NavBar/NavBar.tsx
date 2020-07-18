@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { menuItemsLabel, menuItemsButton } from './NavBar.const';
 import { DrawerProps } from './NavBar.type';
 import images from '../../variables/images';
 
-const mockUsePath = () => '/';
-
 const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
-  const currentPath = mockUsePath();
+  const _history = useHistory();
+  const location = useLocation();
 
-  const isActive = (path: string) => currentPath === path;
+  const _activePath = (path: string) => path === location.pathname;
   const isLastLabel = (index: number) => index === menuItemsLabel.length-1;
 
   return (
@@ -25,22 +25,24 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
           />
         </div>
         {menuItemsLabel.map(({ label, path }, index) => (
-          <a 
+          <NavLink 
             key={`#drawer-link-${label}-${index}`}
             className={`
-              ${isActive(path) ? 'active' : ''} nav-drawer mx-2 border-t-2 py-2
+              nav-drawer mx-2 border-t-2 py-2
               ${isLastLabel(index) ? 'border-b-2' : ''}
             `}
-            href={path}
+            to={path}
+            activeClassName='active'
+            isActive={ () => _activePath(path) }
           >
             {label}
-          </a>
+          </NavLink>
         ))}
         {menuItemsButton.map(({ label, path }, index) => (
           <button
             key={`#drawer-button-${label}-${index}`}
             className="btn primary mt-4 text-lg"
-            onClick={ () => window.location.href = path }
+            onClick={ () => _history.replace(path) }
           >
             {label}
           </button>
@@ -56,9 +58,9 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
 
 const NavBar: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const currentPath = mockUsePath();
+  const location = useLocation();
 
-  const isActive = (path: string) => currentPath === path;
+  const _activePath = (path: string) => path === location.pathname;
   const openDrawer = () => setDrawerOpen(true);
   const closeDrawer = () => setDrawerOpen(false);
 
@@ -74,13 +76,17 @@ const NavBar: React.FC = () => {
       </div>
       <div className="hidden lg:flex flex-row justify-center items-center">
         {menuItemsLabel.map(({ label, path }, index) => (
-          <a 
-            key={`#nav-link-${label}-${index}`}
-            className={`${isActive(path) ? 'active' : ''} nav-drawer mx-2`}
-            href={path}
+          <NavLink 
+            key={`#drawer-link-${label}-${index}`}
+            className={`
+              nav-drawer mx-2
+            `}
+            to={path}
+            activeClassName='active'
+            isActive={ () => _activePath(path) }
           >
             {label}
-          </a>
+          </NavLink>
         ))}
         {menuItemsButton.map(({ label, path }, index) => (
           <button
