@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp/SignUp';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Switch>
           {/* TODO: Bind components to each route */}
           <Route exact path="/" component={Home} />
-          <Route path="/about" />
+          <Route path="/about" component={About}/>
           <Route path="/signup" component={SignUp}/>
         </Switch>
       </BrowserRouter>
