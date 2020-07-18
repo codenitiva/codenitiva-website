@@ -1,5 +1,7 @@
 Codenitiva Official Website Repository
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da445845-e2f5-4292-adb5-e3b80290963d/deploy-status)](https://app.netlify.com/sites/codenitiva/deploys)
+
 ```
 Copyright 2020 Codenitiva
    Licensed under the Apache License, Version 2.0 (the "License");
