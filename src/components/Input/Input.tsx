@@ -24,7 +24,7 @@ const Input : React.FC<InputProps> = ({
         <div className="border-r-2 h-8 mx-2"></div>
       </span>
       <input
-        className="w-48 lg:w-56 placeholder-gray-900"
+        className="w-full placeholder-gray-900"
         onChange={ _handleChange }
         type={type}
         placeholder={placeholder}
