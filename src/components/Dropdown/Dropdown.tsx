@@ -34,7 +34,7 @@ const DropDown : React.FC<DropDownProps> = ({ list, placeholder, setChosenItem }
       </div>
       { _open ? 
         <div className={`
-          flex flex-col justify-start items-start 
+          absolute bg-white flex flex-col justify-start items-start z-10
         `}>
           {dropDownData(list)?.map((label, index) => (
             <div className="w-full border-2 border-t-0 cursor-pointer">

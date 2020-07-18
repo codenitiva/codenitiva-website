@@ -12,7 +12,7 @@ const Icon: React.FC<IconProps> = ({ link, icon }) => {
       <img
         className="footer-icon mr-2"
         src={images(icon)}
-        alt={icon}
+        alt={`icon-${icon}`}
       />
     </a>
   );

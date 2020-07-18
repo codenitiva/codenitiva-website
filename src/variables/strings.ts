@@ -8,5 +8,7 @@ export default {
   linkedin: 'LinkedIn',
   slack: 'Slack',
   facebook: 'Facebook',
-  home: 'Home'
+  home: 'Home',
+  signIn: 'Sign In',
+  signUp: 'Sign Up'
 }

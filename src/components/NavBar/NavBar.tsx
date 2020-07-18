@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { menuItemsLabel } from './NavBar.const';
+import { menuItemsLabel, menuItemsButton } from './NavBar.const';
 import { DrawerProps } from './NavBar.type';
 import images from '../../variables/images';
 
@@ -9,6 +9,7 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
   const currentPath = mockUsePath();
 
   const isActive = (path: string) => currentPath === path;
+  const isLastLabel = (index: number) => index === menuItemsLabel.length-1;
 
   return (
     <div className="absolute left-0 top-0">
@@ -26,12 +27,24 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
         {menuItemsLabel.map(({ label, path }, index) => (
           <a 
             key={`#drawer-link-${label}-${index}`}
-            className={`${isActive(path) ? 'active' : ''} nav-drawer mx-2 border-t-2 py-2`}
+            className={`
+              ${isActive(path) ? 'active' : ''} nav-drawer mx-2 border-t-2 py-2
+              ${isLastLabel(index) ? 'border-b-2' : ''}
+            `}
             href={path}
           >
             {label}
           </a>
         ))}
+        {menuItemsButton.map(({ label, path }, index) => (
+          <button
+            key={`#drawer-button-${label}-${index}`}
+            className="btn primary mt-4 text-lg"
+            onClick={ () => window.location.href = path }
+          >
+            {label}
+          </button>
+        ))} 
       </div>
       <div
         onClick={close}
@@ -50,7 +63,7 @@ const NavBar: React.FC = () => {
   const closeDrawer = () => setDrawerOpen(false);
 
   return (
-    <nav className="flex flex-row bg-white lg:flex-row-reverse items-center justify-between py-4 px-4 lg:px-12 sticky top-0 z-50">
+    <nav className="flex flex-row bg-white lg:flex-row-reverse items-center justify-between py-4 px-4 lg:px-12 sticky top-0 z-30">
       <Drawer open={drawerOpen} close={closeDrawer} />
       <div onClick={openDrawer} className="lg:hidden">
         <img
@@ -59,7 +72,7 @@ const NavBar: React.FC = () => {
           alt="Menu"
         />
       </div>
-      <div className="hidden lg:flex flex-row">
+      <div className="hidden lg:flex flex-row justify-center items-center">
         {menuItemsLabel.map(({ label, path }, index) => (
           <a 
             key={`#nav-link-${label}-${index}`}
@@ -68,6 +81,15 @@ const NavBar: React.FC = () => {
           >
             {label}
           </a>
+        ))}
+        {menuItemsButton.map(({ label, path }, index) => (
+          <button
+            key={`#nav-button-${label}-${index}`}
+            className="btn primary mx-2 text-lg"
+            onClick={ () => window.location.href = path }
+          >
+            {label}
+          </button>
         ))}
       </div>
       <a href="/">

@@ -12,8 +12,12 @@ a.active, a:hover {
   @apply text-primary;
 }
 
+.btn-base {
+  @apply transition duration-200 text-base font-header font-bold rounded-full;
+}
+
 .btn {
-  @apply transition duration-200  py-1 px-8 text-xl font-header font-bold rounded-full;
+  @apply btn-base py-1 px-8;
 }
 
 .btn.primary, .btn.secondary:hover {
@@ -22,6 +26,10 @@ a.active, a:hover {
 
 .btn.secondary, .btn.primary:hover {
   @apply bg-white text-primary border-2 border-primary;
+}
+
+.btn.fluid {
+  @apply py-1 px-0 flex-grow w-0;
 }
 
 .header {
