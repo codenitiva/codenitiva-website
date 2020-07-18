@@ -12,6 +12,7 @@ export type FormLayoutProps = FormDataType & {
   setObjectData: (data: string) => void;
   open: () => void;
   active: boolean;
+  submit: (e: any) => void;
 };
 
 export type FormProps = {
