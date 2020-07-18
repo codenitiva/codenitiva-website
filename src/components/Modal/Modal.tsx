@@ -11,11 +11,14 @@ const ModalLayout : React.FC<ModalProps> = ({ open, close, children }) => {
       flex flex-col items-center
     `}>
       <div className={`
-        w-4/5 md:w-88 lg:w-2/5 bg-gray-100 py-4 px-6
+        w-4/5 md:w-88 lg:w-2/5 bg-white py-4 px-6
         flex flex-col justify-between items-start z-50
         rounded-lg
       `}>
-        <div onClick={close} className="self-end mb-4">
+        <div 
+          onClick={close} 
+          className="self-end mb-4 cursor-pointer"
+        >
           <img
             className="w-6"
             src={images("cross")}
@@ -55,7 +58,7 @@ const ModalTC : React.FC<ModalProps> = ({ open, close }) => {
         <Input 
           type="text"
           placeholder="Type here"
-          icon=""
+          icon="enter"
           setText={_setText}
         />
         <button
