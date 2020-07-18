@@ -19,6 +19,7 @@ const Input : React.FC<InputProps> = ({
       <span className={`${style ? '' : 'hidden'} flex flex-row justify-center`}>
         <img
           src={images(icon)}
+          alt={`icon-${icon}`}
         />
         <div className="border-r-2 h-8 mx-2"></div>
       </span>
@@ -31,6 +32,7 @@ const Input : React.FC<InputProps> = ({
       <span className={`${style ? 'hidden' : ''}`}>
         <img
           src={images(icon)}
+          alt={`icon-${icon}`}
         />
       </span>
     </div>
