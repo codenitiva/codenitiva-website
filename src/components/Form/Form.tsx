@@ -12,7 +12,7 @@ const FormLayout : React.FC<FormLayoutProps> = ({
       <img 
         className="w-7/12 lg:w-0 lg:flex-grow"
         src={image}
-        alt="form-image"
+        alt="form-signup-vector"
       />
       <div className="mt-4 lg:mt-0 lg:ml-16 w-full lg:w-0 lg:flex-grow flex flex-col justify-center items-center flex-shrink-0">
         <h2 className="mb-8 text-lg lg:text-2xl text-center lg:text-left">
