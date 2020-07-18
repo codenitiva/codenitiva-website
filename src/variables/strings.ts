@@ -10,5 +10,7 @@ export default {
   facebook: 'Facebook',
   home: 'Home',
   signIn: 'Sign In',
-  signUp: 'Sign Up'
-}
+  signUp: 'Sign Up',
+  joinUs: 'Join Us Now',
+  findOut: 'Find Out More'
+};

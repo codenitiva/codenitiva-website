@@ -3,10 +3,14 @@ import Carousel from '../../components/Carousel/Carousel';
 import Layout from '../../components/Layout/Layout';
 
 import { Helmet } from 'react-helmet';
+import { NavLink } from 'react-router-dom';
 
 import homeConstants from './Home.const';
 
 const Home: React.FC = () => {
+
+  const _primaryButton = (index: number) => index === 0;
+
   return (
     <>
       <Helmet>
@@ -27,8 +31,19 @@ const Home: React.FC = () => {
               and education growth.
             </p>
             <div className="my-4 flex flex-col lg:flex-row items-stretch lg:items-start">
-              <a href="/signup" className="my-2 lg:my-0 lg:mr-2 btn primary text-xl">Join Us Now</a>
-              <a href="/about" className="my-2 lg:my-0 lg:mr-2 btn secondary text-xl">Find Out More</a>
+              {homeConstants.buttonRedirect.map(({label, path}, index) => (
+                <NavLink 
+                  key={`#drawer-link-${label}-${index}`}
+                  className={`
+                    my-2 lg:my-0 lg:mr-2 btn text-xl
+                    ${_primaryButton(index) ? 'primary' : 'secondary'}
+                  `}
+                  to={path}
+                  activeClassName='active'
+                >
+                  {label}
+                </NavLink>
+              ))}
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import strings from "../../variables/strings";
+
 export default {
   carouselData: [
     {
@@ -25,4 +27,14 @@ export default {
       image: require('../../assets/vector/connection.svg'),
     }
   ],
+  buttonRedirect: [
+    {
+      label: strings.joinUs,
+      path: '/signup'
+    },
+    {
+      label: strings.findOut,
+      path: '/about'
+    }
+  ]
 };
