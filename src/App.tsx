@@ -17,8 +17,8 @@ function App() {
       <Helmet titleTemplate="Codenitiva | %s" defaultTitle="Codenitiva">
         <meta name="description" content="Codenitiva, Platform for Developers to sharing knowledge" />
       </Helmet>
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Switch>
           {/* TODO: Bind components to each route */}
           <Route exact path="/" component={Home} />
