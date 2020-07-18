@@ -27,8 +27,8 @@ const Home: React.FC = () => {
               and education growth.
             </p>
             <div className="my-4 flex flex-col lg:flex-row items-stretch lg:items-start">
-              <a href="/" className="my-2 lg:my-0 lg:mr-2 btn primary">Join Us Now</a>
-              <a href="/" className="my-2 lg:my-0 lg:mr-2 btn secondary">Find Out More</a>
+              <a href="/" className="my-2 lg:my-0 lg:mr-2 btn primary text-xl">Join Us Now</a>
+              <a href="/" className="my-2 lg:my-0 lg:mr-2 btn secondary text-xl">Find Out More</a>
             </div>
           </div>
         </div>

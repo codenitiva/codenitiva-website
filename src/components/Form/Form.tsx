@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FormLayoutProps, FormProps, FormButton } from "./Form.type";
 import Input from "../Input/Input";
 import DropDown from "../Dropdown/Dropdown";
-import ModalTC from "../Modal/Modal";
 
 const FormLayout : React.FC<FormLayoutProps> = ({
   image, content, inputType, gotoNext, gotoPrevious, show, setObjectData, active, open
@@ -35,13 +34,13 @@ const FormLayout : React.FC<FormLayoutProps> = ({
         }
         <div className="mt-8 flex flex-row justify-between w-4/5 lg:w-9/12">
           <button 
-            className={`btn primary w-auto lg:w-2/5 lg:text-lg ${show(FormButton.Prev)}`}
+            className={`btn primary fluid mr-2 lg:w-2/5 lg:text-lg ${show(FormButton.Prev)}`}
             onClick={gotoPrevious}
           >
             Prev
           </button>
           <button 
-            className={`btn primary w-auto lg:w-2/5 lg:text-lg`}
+            className={`btn primary fluid ml-2 lg:w-2/5 lg:text-lg`}
             onClick={ active ? open : gotoNext }
           >
             { active ? `Submit` : `Next` }
@@ -56,6 +55,8 @@ const Form : React.FC<FormProps> = ({ data, open }) => {
 
   const [_active, _setActive] = useState(0);
   const [_filledData, _setFilledData] = useState({});
+
+  console.log(_filledData);
 
   const goto = (index: number): void => index >= 0 && index <= data.length-1 ? _setActive(index) : undefined;
   const gotoPrevious = (): void => goto(_active - 1);
