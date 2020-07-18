@@ -32,6 +32,12 @@ const images = (icon: string) => {
       return require('../assets/icon/active_indicator.svg');
     case 'indicator':
       return require('../assets/icon/indicator.svg');
+    case 'about-who':
+      return require('../assets/vector/about/who.svg');
+    case 'about-vision':
+      return require('../assets/vector/about/vision.svg');
+    case 'about-mission':
+      return require('../assets/vector/about/mission.svg');
   };
 };
 
