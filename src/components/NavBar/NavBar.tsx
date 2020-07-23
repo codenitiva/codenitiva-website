@@ -8,7 +8,7 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
   const _history = useHistory();
   const _location = useLocation();
 
-  const _activePath = (path: string) => path === _location.pathname;
+  const _activePath = (path: string) => path === _location.pathname; 
   const _isLastLabel = (index: number) => index === menuItemsLabel.length-1;
 
   return (
@@ -41,7 +41,10 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
         {menuItemsButton.map(({ label, path }, index) => (
           <button
             key={`#drawer-button-${label}-${index}`}
-            className="btn primary mt-4 text-lg"
+            className={`
+              btn primary mt-4 text-lg
+              ${_activePath(path) ? 'hidden' : ''}
+            `}
             onClick={ () => _history.replace(path) }
           >
             {label}
@@ -92,7 +95,10 @@ const NavBar: React.FC = () => {
         {menuItemsButton.map(({ label, path }, index) => (
           <button
             key={`#nav-button-${label}-${index}`}
-            className="btn primary mx-2 text-lg"
+            className={`
+              btn primary mx-2 text-lg
+              ${_activePath(path) ? 'hidden' : ''}
+            `}
             onClick={ () => _history.replace(path) }
           >
             {label}
