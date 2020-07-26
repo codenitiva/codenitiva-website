@@ -51,6 +51,18 @@ const Home: React.FC = () => {
       <Layout secondary>
         <Carousel data={homeConstants.carouselData} />
       </Layout>
+      <Layout>
+        <div className="flex flex-col w-full items-center">
+          <h1>What are you waiting for?</h1>
+          <h2 className="text-center">Join Codenitiva now to start upskilling yourself</h2>
+          <NavLink 
+            className="btn primary text-xl mt-4 text-center w-full lg:w-auto"
+            to="/signup"
+          >
+            Join Us Now
+          </NavLink>
+        </div>
+      </Layout>
     </>
   );
 };
