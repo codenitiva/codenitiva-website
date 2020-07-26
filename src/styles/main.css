@@ -45,6 +45,10 @@ h1 {
   @apply header text-2xl font-bold;
 }
 
+h2 {
+  @apply header text-lg font-bold
+}
+
 input {
   @apply header text-base font-bold;
 }
@@ -58,13 +62,13 @@ input {
     @apply header text-4xl font-bold;
   }
 
+  h2 {
+    @apply header text-2xl font-bold;
+  }
+
   input {
     @apply text-lg;
   }
-}
-
-h2 {
-  @apply header text-2xl font-bold;
 }
 
 h5 {
