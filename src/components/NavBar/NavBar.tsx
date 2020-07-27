@@ -45,7 +45,7 @@ const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
               btn primary mt-4 text-lg
               ${_activePath(path) ? 'hidden' : ''}
             `}
-            onClick={ () => _history.replace(path) }
+            onClick={() => _history.replace(path)}
           >
             {label}
           </button>
@@ -87,7 +87,7 @@ const NavBar: React.FC = () => {
             `}
             to={path}
             activeClassName='active'
-            isActive={ () => _activePath(path) }
+            isActive={() => _activePath(path)}
           >
             {label}
           </NavLink>
@@ -99,7 +99,7 @@ const NavBar: React.FC = () => {
               btn primary mx-2 text-lg
               ${_activePath(path) ? 'hidden' : ''}
             `}
-            onClick={ () => _history.replace(path) }
+            onClick={() => _history.replace(path)}
           >
             {label}
           </button>

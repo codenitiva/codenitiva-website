@@ -11,7 +11,7 @@ const Card : React.FC<CardProps> = ({
   iconURL
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center relative w-64 shadow-card rounded-lg">
+    <div className="flex flex-col items-center justify-center transition transform duration-200 relative w-64 shadow-card hover:shadow-lg hover:scale-105 rounded-lg">
       <div className="absolute top-0 left-0">
         <img
           className="w-64"
@@ -30,7 +30,7 @@ const Card : React.FC<CardProps> = ({
         <h2>{name}</h2>
       </div>
       <div className="align-center">
-        <p>{position}</p>
+        <small>{position}</small>
       </div>
       <div className="flex flex-row items-center justify-center mt-4 mb-8">
         {iconType.map((type, index) => (

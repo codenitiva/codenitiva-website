@@ -37,7 +37,7 @@ a.active, a:hover {
 }
 
 
-p {
+p, small {
   @apply text-dark text-sm font-content;
 }
 

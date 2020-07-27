@@ -10,9 +10,7 @@ const Input : React.FC<InputProps> = ({
   setText
 }) => {
 
-  const _handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
-  };
+  const _handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setText(e.target.value);
 
   return (
     <div className="flex flex-row justify-between items-center border-b-2 p-2">

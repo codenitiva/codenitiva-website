@@ -20,7 +20,6 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Switch>
-          {/* TODO: Bind components to each route */}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About}/>
           <Route path="/signup" component={SignUp}/>
