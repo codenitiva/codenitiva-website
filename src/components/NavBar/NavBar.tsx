@@ -3,6 +3,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { menuItemsLabel, menuItemsButton } from './NavBar.const';
 import { DrawerProps } from './NavBar.type';
 import images from '../../variables/images';
+import useScrollHeight from '../../hooks/useScrollHeight';
 
 const Drawer: React.FC<DrawerProps> = ({ open, close }) => {
   const _history = useHistory();
@@ -63,13 +64,17 @@ const NavBar: React.FC = () => {
   const [_drawerOpen, _setDrawerOpen] = useState(false);
   const _history = useHistory();
   const _location = useLocation();
+  const _height = useScrollHeight();
 
   const _activePath = (path: string) => path === _location.pathname;
   const _openDrawer = () => _setDrawerOpen(true);
   const _closeDrawer = () => _setDrawerOpen(false);
 
   return (
-    <nav className="flex flex-row bg-white lg:flex-row-reverse items-center justify-between py-4 px-4 lg:px-12 sticky top-0 z-30">
+    <nav 
+      className="flex flex-row bg-white lg:flex-row-reverse items-center justify-between py-4 px-4 lg:px-12 sticky top-0 z-30"
+      style={{ boxShadow: `0 ${_height/200 * 4}px ${_height/200 * 16}px rgba(0, 0, 0, 0.06)` }}
+    >
       <Drawer open={_drawerOpen} close={_closeDrawer} />
       <div onClick={_openDrawer} className="lg:hidden">
         <img
