@@ -46,7 +46,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
         ))}
       </div>
       <div className="mt-8 flex flex-row self-center">
-        {data.map((d, index) => (
+        {data.map((_, index) => (
           <img 
             className="mx-4 w-4 cursor-pointer"
             alt="indicator"

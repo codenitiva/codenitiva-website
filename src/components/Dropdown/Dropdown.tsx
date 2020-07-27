@@ -13,7 +13,7 @@ const DropDown : React.FC<DropDownProps> = ({ list, placeholder, setChosenItem }
     _setChosen(label);
     _setOpen(prevState => !prevState);
     setChosenItem(label);
-  }
+  };
 
   return (
     <div>
@@ -32,7 +32,7 @@ const DropDown : React.FC<DropDownProps> = ({ list, placeholder, setChosenItem }
           />
         </div>
       </div>
-      { _open ? 
+      {_open ? 
         <div className={`
           absolute bg-white flex flex-col justify-start items-start z-10
         `}>
@@ -47,7 +47,7 @@ const DropDown : React.FC<DropDownProps> = ({ list, placeholder, setChosenItem }
               </h2>
             </div>
             ))}
-        </div> : ''
+        </div> : null
       }
     </div>
   );

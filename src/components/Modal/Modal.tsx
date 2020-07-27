@@ -42,7 +42,7 @@ const ModalTC : React.FC<ModalProps> = ({ open, close }) => {
       close={close}
     >
       <div className="w-full flex flex-col">
-        {/* TODO store to variable */}
+        {/* TODO: store to variable */}
         <p className="mx-1 text-left">
           Before submitting, you need to accept 
           <span className="text-primary"> Codenitiva</span>’s 
@@ -63,7 +63,7 @@ const ModalTC : React.FC<ModalProps> = ({ open, close }) => {
         />
         <button
           className="btn primary mt-4 text-lg"
-          onClick={ () => console.log(_text) }
+          onClick={() => console.log(_text)}
         >
           Submit
         </button>
