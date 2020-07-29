@@ -81,6 +81,7 @@ const About : React.FC = () => {
             {core.members.map(({ name, position, picture, iconType, iconURL }, i) => (
               <div className="flex justify-center my-4 w-full sm:w-1/2 lg:w-1/3">
                 <Card
+                  key={`core-team-card-${name}-${i}`}
                   name={name}
                   position={position}
                   picture={picture}
